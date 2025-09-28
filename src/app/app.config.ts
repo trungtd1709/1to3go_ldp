@@ -6,11 +6,15 @@ import {
   provideClientHydration,
   withEventReplay,
 } from '@angular/platform-browser';
+import { importProvidersFrom } from '@angular/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
+    importProvidersFrom(MatSnackBarModule, BrowserAnimationsModule)
   ],
 };

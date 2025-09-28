@@ -1,6 +1,6 @@
 .footer {
     background-color: var(--primary-color);
-    color: #ecf0f1;
+    color: var(--primary-text);
     margin-top: auto;
   }
   
@@ -18,16 +18,11 @@
   }
   
   .footer-section {
+    color: var(--primary-text); 
     .footer-logo {
       display: flex;
       align-items: center;
       margin-bottom: 1rem;
-      
-      .footer-logo-img {
-        height: 32px;
-        width: auto;
-        margin-right: 0.5rem;
-      }
       
       .footer-logo-text {
         font-size: 1.5rem;
@@ -39,12 +34,12 @@
     .footer-description {
       margin-bottom: 1.5rem;
       line-height: 1.6;
-      color: #bdc3c7;
+      color: #fff;
     }
   }
   
   .footer-title {
-    color: #fff;
+    color: var(--primary-text);
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -60,7 +55,7 @@
     }
     
     .footer-link {
-      color: #bdc3c7;
+      color: #000;
       text-decoration: none;
       transition: color 0.3s ease;
       
@@ -81,7 +76,7 @@
       width: 40px;
       height: 40px;
       background-color: #34495e;
-      color: #bdc3c7;
+      color: #000;
       border-radius: 50%;
       text-decoration: none;
       transition: all 0.3s ease;
@@ -99,7 +94,7 @@
       display: flex;
       align-items: center;
       margin-bottom: 0.75rem;
-      color: #bdc3c7;
+      color: #000;
       
       i {
         width: 20px;
@@ -116,6 +111,11 @@
     
     .footer-copyright {
       color: var(--primary-text);
+    }
+
+    .footer-logo-img {
+      height: 60px;
+      width: 60px;
     }
   }
   

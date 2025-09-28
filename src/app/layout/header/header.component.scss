@@ -35,12 +35,14 @@
 }
 
 .navbar-brand {
-  font-weight: bold;
+  // font-weight: bold;
   color: var(--primary-text) !important;
 }
 
 .nav-link.active {
   font-weight: bold;
+  color: #007185;
+  text-decoration: underline;
 }
 
 @media (max-width: 991.98px) {

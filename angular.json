@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "kinh_ky_ldp": {
+    "1to3go_ldp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/kinh_ky_ldp",
+            "outputPath": "dist/1to3go_ldp",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -76,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "kinh_ky_ldp:build:production"
+              "buildTarget": "1to3go_ldp:build:production"
             },
             "development": {
-              "buildTarget": "kinh_ky_ldp:build:development"
+              "buildTarget": "1to3go_ldp:build:development"
             }
           },
           "defaultConfiguration": "development"

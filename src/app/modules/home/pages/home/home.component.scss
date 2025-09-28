@@ -1,0 +1,18 @@
+.home-container{
+    padding: 0 var(--gap);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.banner-vertical{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.banner-horizontal{
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+}
