@@ -1,0 +1,91 @@
+<div class="customer-reviews-container">
+  <!-- Left Column -->
+  <div class="left-column">
+    <h2 class="reviews-title">Customer reviews</h2>
+    
+    <!-- Overall Rating -->
+    <div class="overall-rating">
+      <div class="stars-container">
+        <div class="stars" [attr.data-rating]="data.overallRating">
+          <span *ngFor="let filled of getStarArray(data.overallRating); let i = index" 
+                class="star" 
+                [class.filled]="filled">★</span>
+          <span *ngIf="hasPartialStar(data.overallRating)" 
+                class="star partial" 
+                [style.--partial-width.%]="getPartialStarWidth(data.overallRating)">★</span>
+        </div>
+        <span class="rating-text">{{ data.overallRating }} out of 5</span>
+      </div>
+      <p class="total-ratings">{{ data.totalRatings }} global ratings</p>
+    </div>
+
+    <!-- Rating Distribution -->
+    <div class="rating-distribution">
+      <div *ngFor="let rating of data.ratingDistribution" class="rating-row">
+        <span class="star-label">{{ rating.stars }} star</span>
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width.%]="rating.percentage"></div>
+        </div>
+        <span class="percentage">{{ rating.percentage }}%</span>
+      </div>
+    </div>
+
+    <!-- <button class="how-ratings-work" (click)="onHowRatingsWorkClick()">
+      How customer reviews and ratings work
+      <span class="dropdown-arrow">⌄</span>
+    </button> -->
+  </div>
+
+  <!-- Right Column -->
+  <div class="right-column">
+    <h2 class="top-reviews-title">{{ data.topReviewsTitle }}</h2>
+    
+    <div class="reviews-list">
+      <div *ngFor="let review of data.reviews" class="review-item">
+        <div class="review-header">
+          <div class="reviewer-avatar">
+            <img *ngIf="review.avatarUrl; else defaultAvatar" 
+                 [src]="review.avatarUrl" 
+                 [alt]="review.reviewerName">
+            <ng-template #defaultAvatar>
+              <div class="default-avatar">👤</div>
+            </ng-template>
+          </div>
+          <span class="reviewer-name">{{ review.reviewerName }}</span>
+        </div>
+
+        <div class="review-rating">
+          <div class="stars">
+            <span *ngFor="let filled of getStarArray(review.rating); let i = index" 
+                  class="star" 
+                  [class.filled]="filled">★</span>
+          </div>
+          <span class="review-title">{{ review.title }}</span>
+        </div>
+
+        <div class="review-meta">
+          <span class="review-date">Reviewed in {{ review.location }} on {{ review.reviewDate }}</span>
+        </div>
+
+        <div class="review-details">
+          <span class="color-info">Color: {{ review.color }}</span>
+          <span *ngIf="review.isVerifiedPurchase" class="verified-purchase">Verified Purchase</span>
+        </div>
+
+        <div class="review-content">
+          <p>{{ review.content }}</p>
+        </div>
+
+        <div *ngIf="review.helpfulVotes > 0" class="helpful-votes">
+          <span *ngIf="review.helpfulVotes === 1">One person found this helpful</span>
+          <span *ngIf="review.helpfulVotes > 1">{{ review.helpfulVotes }} people found this helpful</span>
+        </div>
+
+        <!-- <div class="review-actions">
+          <button class="helpful-btn" (click)="onHelpfulClick(review.id)">Helpful</button>
+          <button class="report-btn" (click)="onReportClick(review.id)">Report</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
