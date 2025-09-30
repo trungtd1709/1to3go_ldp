@@ -1,0 +1,129 @@
+<div class="product-display">
+    <!-- Image Carousel Section -->
+    <div class="image-section">
+      <div class="carousel-container">
+        <button 
+          class="carousel-btn carousel-btn-prev" 
+          (click)="previousImage()"
+          [disabled]="images.length <= 1">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        
+        <div class="image-container">
+          <img 
+            *ngIf="images.length > 0" 
+            [src]="images[currentImageIndex]?.url" 
+            [alt]="images[currentImageIndex]?.alt || title"
+            class="product-image">
+          <div *ngIf="images.length === 0" class="no-image">
+            No Image Available
+          </div>
+        </div>
+        
+        <button 
+          class="carousel-btn carousel-btn-next" 
+          (click)="nextImage()"
+          [disabled]="images.length <= 1">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Image indicators -->
+      <div class="image-indicators" *ngIf="images.length > 1">
+        <button 
+          *ngFor="let image of images; let i = index"
+          class="indicator"
+          [class.active]="i === currentImageIndex"
+          (click)="currentImageIndex = i">
+        </button>
+      </div>
+    </div>
+  
+    <!-- Product Details Section -->
+    <div class="details-section">
+      <h1 class="product-title">{{ title }}</h1>
+      
+      <!-- Rating -->
+      <div class="rating-container" *ngIf="rating.score > 0">
+        <div class="rating">
+          <span class="rating-score">{{ rating.score }}</span>
+          <div class="stars">
+            <span 
+              *ngFor="let star of ratingStars; let i = index" 
+              class="star"
+              [class.filled]="star"
+              [class.half]="rating.score % 1 >= 0.5">
+              ★
+            </span>
+          </div>
+          <span class="rating-count">{{ rating.count }}</span>
+        </div>
+      </div>
+  
+      <!-- Price -->
+      <div class="price-container">
+        <div class="price-main">
+          <span class="currency">$</span>
+          <span class="price-whole">{{ price.current }}</span>
+          <span class="price-decimal" *ngIf="price.current % 1 > 0">
+            {{ (price.current % 1).toFixed(2).substring(1) }}
+          </span>
+        </div>
+        
+        <div class="price-details" *ngIf="price.pricePerUnit || price.original">
+          <span class="price-per-unit" *ngIf="price.pricePerUnit">({{ price.pricePerUnit }})</span>
+          <span class="original-price" *ngIf="price.original">${{ price.original.toFixed(2) }}</span>
+          <span class="discount" *ngIf="discountPercentage">({{ discountPercentage }}% off)</span>
+        </div>
+      </div>
+  
+      <!-- Delivery Info -->
+      <div class="delivery-info" *ngIf="deliveryDate">
+        <span>Get it by {{ deliveryDate }}.</span>
+      </div>
+  
+      <!-- Seller Info -->
+      <div class="seller-info" *ngIf="seller || fulfillment">
+        <span *ngIf="seller">Sold by {{ seller }}</span>
+        <span *ngIf="seller && fulfillment"> and </span>
+        <span *ngIf="fulfillment">{{ fulfillment }}</span>
+      </div>
+  
+      <!-- Features -->
+      <div class="features-section" *ngIf="features.length > 0">
+        <ul class="features-list">
+          <li 
+            *ngFor="let feature of features; let i = index" 
+            class="feature-item"
+            [class.hidden]="!showMoreExpanded && i >= 2">
+            <strong>{{ feature.title }}</strong>
+            <span *ngIf="feature.description"> – {{ feature.description }}</span>
+          </li>
+        </ul>
+        
+        <button 
+          *ngIf="features.length > 2" 
+          class="show-more-btn"
+          (click)="toggleShowMore()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path 
+              [attr.d]="showMoreExpanded ? 'M18 15L12 9L6 15' : 'M6 9L12 15L18 9'" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"/>
+          </svg>
+          {{ showMoreExpanded ? 'Show less' : 'Show more' }}
+        </button>
+      </div>
+  
+      <!-- See All Details Button -->
+      <button class="see-details-btn" (click)="onSeeAllDetails()">
+        See all details
+      </button>
+    </div>
+  </div>

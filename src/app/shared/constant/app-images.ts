@@ -7,7 +7,30 @@ export const APP_IMAGES = {
       BANNER_1: '/images/banner/banner_1.jpg',
       BANNER_2: '/images/banner/banner_2.jpg',
       BANNER_3: '/images/banner/banner_3.jpg',
-
+    },
+    DOG_COLLAR:{
+      COLLAR_1: '/images/dog_collar/1.jpg',
+      COLLAR_2: '/images/dog_collar/2.jpg',
+      COLLAR_3: '/images/dog_collar/3.jpg',
+      COLLAR_4: '/images/dog_collar/4.jpg',
+      COLLAR_5: '/images/dog_collar/5.jpg',
+      COLLAR_6: '/images/dog_collar/6.jpg',
+      COLLAR_7: '/images/dog_collar/7.jpg',
+    },
+    PET_HAIR_REMOVER: {
+      HAIR_REMOVER_1: '/images/pet_hair_remover/1.jpg',
+      HAIR_REMOVER_2: '/images/pet_hair_remover/2.jpg',
+      HAIR_REMOVER_3: '/images/pet_hair_remover/3.jpg',
+    },
+    PET_NURSING_SUPPLIES: {
+      SUPLLIES_1: '/images/pet_nursing_supplies/1.jpg',
+      SUPLLIES_2: '/images/pet_nursing_supplies/2.jpg',
+    },
+    PET_WASHING_GLOVES: {
+      GLOVES_1: '/images/pet_washing_gloves/1.jpg',
+      GLOVES_2: '/images/pet_washing_gloves/2.jpg',
+      GLOVES_3: '/images/pet_washing_gloves/3.jpg',
+      GLOVES_4: '/images/pet_washing_gloves/4.jpg',
     },
     LOGO: '/logo.jpg',
   };
