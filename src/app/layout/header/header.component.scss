@@ -45,6 +45,43 @@
   text-decoration: underline;
 }
 
+.dropdown {
+  position: relative;
+
+  .dropdown-menu {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    z-index: 1000;
+    min-width: 200px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.375rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+    margin-top: 0.125rem;
+
+    .dropdown-item {
+      display: block;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      color: #212529;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+
+      &:hover {
+        background-color: #f8f9fa;
+        color: #007185;
+      }
+
+      &:active {
+        background-color: #007185;
+        color: white;
+      }
+    }
+  }
+}
+
 @media (max-width: 991.98px) {
   .d-flex {
     margin-top: 1rem;

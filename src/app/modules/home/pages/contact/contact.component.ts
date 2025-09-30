@@ -16,7 +16,15 @@ export class ContactComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private snackBar: MatSnackBar
-  ) {}
+  ) {
+    // Add Font Awesome CSS if not already included globally
+    if (!document.querySelector('link[href*="font-awesome"]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
+      document.head.appendChild(link);
+    }
+  }
 
   ngOnInit(): void {
     this.initializeForm();

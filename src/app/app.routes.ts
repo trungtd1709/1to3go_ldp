@@ -13,6 +13,10 @@ export const routes: Routes = [
     loadComponent: () => import('./modules/home/pages/contact/contact.component').then(c => c.ContactComponent)
   },
   {
+    path: 'about-us',
+    loadComponent: () => import('./modules/home/pages/about-us/about-us.component').then(c => c.AboutUsComponent)
+  },
+  {
     path: 'dog-collar',
     loadComponent: () => import('./modules/home/pages/product/product.component').then(c => c.ProductComponent)
   },

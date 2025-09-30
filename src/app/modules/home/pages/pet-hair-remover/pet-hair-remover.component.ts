@@ -34,7 +34,7 @@ export class PetHairRemoverComponent {
     },
     seller: "Eltri",
     fulfillment: "Fulfilled by Amazon",
-    detailUrl: "https://www.amazon.com/dp/B0C69RGV1W?th=1&psc=1",
+    detailUrl: "https://www.amazon.com/1TO3GO-Convenient-Reusable-Furniture-Clothing/dp/B0CM6WTJ21?ref_=ast_sto_dp",
     features: [
       {
         title: "GREAT PERFORMANCE",

@@ -19,7 +19,7 @@ export class ProductComponent {
       { url: this.APP_IMAGES.DOG_COLLAR.COLLAR_4, alt: 'Product view 2' },
       { url: this.APP_IMAGES.DOG_COLLAR.COLLAR_5, alt: 'Product view 2' },
     ],
-    rating: { score: 4.4, count: 53 },
+    rating: { score: 4.1, count: 146 },
     price: { 
       current: 9.99, 
       original: 12.99, 

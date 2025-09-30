@@ -15,4 +15,13 @@ import { APP_IMAGES } from '../../shared/constant/app-images';
 export class HeaderComponent {
   APP_IMAGES = APP_IMAGES;
   isMenuCollapsed = true;
+  isDropdownCollapsed = true;
+
+  showDropdown() {
+    this.isDropdownCollapsed = false;
+  }
+
+  hideDropdown() {
+    this.isDropdownCollapsed = true;
+  }
 }

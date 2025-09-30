@@ -31,29 +31,52 @@
         </li>
 
         <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/about-us"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            About us
+          </a>
+        </li>
+
+        <li class="nav-item">
           <a class="nav-link" routerLink="/contact" routerLinkActive="active"
             >Contact</a
           >
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/dog-collar" routerLinkActive="active"
-            >Dog Collar</a
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="petProductsDropdown"
+            role="button"
+            (mouseenter)="showDropdown()"
+            (mouseleave)="hideDropdown()"
+            [attr.aria-expanded]="!isDropdownCollapsed"
+            aria-haspopup="true"
           >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/pet-washing-gloves" routerLinkActive="active"
-            >Pet Washing Gloves</a
+            Products Categories
+          </a>
+          <ul
+            class="dropdown-menu"
+            [ngbCollapse]="isDropdownCollapsed"
+            (mouseenter)="showDropdown()"
+            (mouseleave)="hideDropdown()"
           >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/pet-hair-remover" routerLinkActive="active"
-            >Pet Hair Remover</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/pet-nursing-supplies" routerLinkActive="active"
-            >Pet Nursing Supplies</a
-          >
+            <li>
+              <a class="dropdown-item" routerLink="/dog-collar">Dog Collar</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/pet-washing-gloves">Pet Washing Gloves</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/pet-hair-remover">Pet Hair Remover</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/pet-nursing-supplies">Pet Nursing Supplies</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
