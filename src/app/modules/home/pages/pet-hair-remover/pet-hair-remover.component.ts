@@ -28,6 +28,18 @@ export class PetHairRemoverComponent {
         url: this.APP_IMAGES.PET_HAIR_REMOVER.HAIR_REMOVER_3,
         alt: 'Product view 3',
       },
+      {
+        url: this.APP_IMAGES.PET_HAIR_REMOVER.HAIR_REMOVER_4,
+        alt: 'Product view 4',
+      },
+      {
+        url: this.APP_IMAGES.PET_HAIR_REMOVER.HAIR_REMOVER_5,
+        alt: 'Product view 5',
+      },
+      {
+        url: this.APP_IMAGES.PET_HAIR_REMOVER.HAIR_REMOVER_6,
+        alt: 'Product view 6',
+      },
     ],
     price: {
       current: 9.99,

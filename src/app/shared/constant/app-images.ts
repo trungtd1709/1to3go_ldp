@@ -16,21 +16,35 @@ export const APP_IMAGES = {
       COLLAR_5: '/images/dog_collar/5.jpg',
       COLLAR_6: '/images/dog_collar/6.jpg',
       COLLAR_7: '/images/dog_collar/7.jpg',
+      COLLAR_8: '/images/dog_collar/8.jpg',
     },
     PET_HAIR_REMOVER: {
       HAIR_REMOVER_1: '/images/pet_hair_remover/1.jpg',
       HAIR_REMOVER_2: '/images/pet_hair_remover/2.jpg',
       HAIR_REMOVER_3: '/images/pet_hair_remover/3.jpg',
+      HAIR_REMOVER_4: '/images/pet_hair_remover/4.jpg',
+      HAIR_REMOVER_5: '/images/pet_hair_remover/5.jpg',
+      HAIR_REMOVER_6: '/images/pet_hair_remover/6.jpg',
     },
     PET_NURSING_SUPPLIES: {
       SUPLLIES_1: '/images/pet_nursing_supplies/1.jpg',
       SUPLLIES_2: '/images/pet_nursing_supplies/2.jpg',
+      SUPLLIES_3: '/images/pet_nursing_supplies/3.jpg',
+      SUPLLIES_4: '/images/pet_nursing_supplies/4.jpg',
+      SUPLLIES_5: '/images/pet_nursing_supplies/5.jpg',
+      SUPLLIES_6: '/images/pet_nursing_supplies/6.jpg',
+      SUPLLIES_7: '/images/pet_nursing_supplies/7.jpg',
+      SUPLLIES_8: '/images/pet_nursing_supplies/8.jpg',
+
     },
     PET_WASHING_GLOVES: {
       GLOVES_1: '/images/pet_washing_gloves/1.jpg',
       GLOVES_2: '/images/pet_washing_gloves/2.jpg',
       GLOVES_3: '/images/pet_washing_gloves/3.jpg',
       GLOVES_4: '/images/pet_washing_gloves/4.jpg',
+      GLOVES_5: '/images/pet_washing_gloves/5.jpg',
+      GLOVES_6: '/images/pet_washing_gloves/6.jpg',
+
     },
     LOGO: '/logo.jpg',
   };

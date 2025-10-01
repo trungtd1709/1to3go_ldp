@@ -29,6 +29,30 @@ export class PetNursingSuppliesComponent {
         url: this.APP_IMAGES.PET_NURSING_SUPPLIES.SUPLLIES_2,
         alt: 'Product view 2',
       },
+      {
+        url: this.APP_IMAGES.PET_NURSING_SUPPLIES.SUPLLIES_3,
+        alt: 'Product view 2',
+      },
+      {
+        url: this.APP_IMAGES.PET_NURSING_SUPPLIES.SUPLLIES_4,
+        alt: 'Product view 2',
+      },
+      {
+        url: this.APP_IMAGES.PET_NURSING_SUPPLIES.SUPLLIES_5,
+        alt: 'Product view 2',
+      },
+      {
+        url: this.APP_IMAGES.PET_NURSING_SUPPLIES.SUPLLIES_6,
+        alt: 'Product view 2',
+      },{
+        url: this.APP_IMAGES.PET_NURSING_SUPPLIES.SUPLLIES_7,
+        alt: 'Product view 2',
+      },
+
+      {
+        url: this.APP_IMAGES.PET_NURSING_SUPPLIES.SUPLLIES_8,
+        alt: 'Product view 2',
+      },
     ],
     seller: 'Eltri',
     fulfillment: 'Ships from Amazon',

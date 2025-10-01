@@ -32,6 +32,13 @@ export class PetWashingGlovesComponent {
         url: this.APP_IMAGES.PET_WASHING_GLOVES.GLOVES_4,
         alt: 'Product view 4',
       },
+      {
+        url: this.APP_IMAGES.PET_WASHING_GLOVES.GLOVES_5,
+        alt: 'Product view 5',
+      },{
+        url: this.APP_IMAGES.PET_WASHING_GLOVES.GLOVES_6,
+        alt: 'Product view 6',
+      },
     ],
     price: {
       current: 12.99,

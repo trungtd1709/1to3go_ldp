@@ -25,6 +25,9 @@ export class ProductComponent {
       { url: this.APP_IMAGES.DOG_COLLAR.COLLAR_3, alt: 'Product view 2' },
       { url: this.APP_IMAGES.DOG_COLLAR.COLLAR_4, alt: 'Product view 2' },
       { url: this.APP_IMAGES.DOG_COLLAR.COLLAR_5, alt: 'Product view 2' },
+      { url: this.APP_IMAGES.DOG_COLLAR.COLLAR_6, alt: 'Product view 2' },
+      { url: this.APP_IMAGES.DOG_COLLAR.COLLAR_7, alt: 'Product view 2' },
+      { url: this.APP_IMAGES.DOG_COLLAR.COLLAR_8, alt: 'Product view 2' },
     ],
     rating: { score: 4.1, count: 146 },
     price: {
