@@ -29,7 +29,7 @@ export const routes: Routes = [
     loadComponent: () => import('./modules/home/pages/pet-hair-remover/pet-hair-remover.component').then(c => c.PetHairRemoverComponent)
   },
   {
-    path: 'pet-nursing-supplies',
+    path: 'pet-pill-shooter',
     loadComponent: () => import('./modules/home/pages/pet-nursing-supplies/pet-nursing-supplies.component').then(c => c.PetNursingSuppliesComponent)
   },
   { path: '**', redirectTo: '/' }
