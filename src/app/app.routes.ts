@@ -17,7 +17,7 @@ export const routes: Routes = [
     loadComponent: () => import('./modules/home/pages/about-us/about-us.component').then(c => c.AboutUsComponent)
   },
   {
-    path: 'dog-collar',
+    path: 'pet-collar',
     loadComponent: () => import('./modules/home/pages/product/product.component').then(c => c.ProductComponent)
   },
   {
