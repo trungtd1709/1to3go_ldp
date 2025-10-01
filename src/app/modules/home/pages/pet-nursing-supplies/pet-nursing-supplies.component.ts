@@ -57,7 +57,7 @@ export class PetNursingSuppliesComponent {
     seller: 'Eltri',
     fulfillment: 'Ships from Amazon',
     detailUrl:
-      'https://www.amazon.com/1TO3GO-Pet-Pill-Shooter-Blue/dp/B0DJ9KVNL2?ref_=ast_sto_dp&th=1',
+      'https://www.amazon.com/dp/B0DJ9KVNL2',
     features: [
       {
         title: '2 IN 1',
