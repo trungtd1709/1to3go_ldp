@@ -35,7 +35,7 @@ export class ProductComponent {
     seller: 'Eltri',
     fulfillment: 'Fulfilled by Amazon',
     detailUrl:
-      'https://www.amazon.com/1TO3GO%E3%80%90Upgrade%E3%80%91-Adjustable-Training-X-Large-Improved/dp/B0C69RGV1W?ref_=ast_sto_dp&th=1&psc=1',
+      'https://www.amazon.com/dp/B0C69RGV1W',
     features: [
       {
         title: 'CORRECT & INSTANT METHOD',

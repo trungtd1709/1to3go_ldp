@@ -41,7 +41,7 @@ export class PetWashingGlovesComponent {
     seller: 'Eltri',
     fulfillment: 'Fulfilled by Amazon',
     detailUrl:
-      'https://www.amazon.com/1TO3GO-Grooming-Silicone-Resistant-High-Density/dp/B0C2ZBSM12?ref_=ast_sto_dp&th=1',
+      'https://www.amazon.com/dp/B0C2ZBSM12',
     features: [
       {
         title: 'UPGRADED DESIGN',
