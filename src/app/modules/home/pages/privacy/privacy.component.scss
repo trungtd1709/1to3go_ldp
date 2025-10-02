@@ -1,0 +1,57 @@
+.privacy-policy {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 2.5rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.7;
+  
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #007185; // deep blue
+    }
+  
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: #007185; // brighter blue
+      border-left: 4px solid #007185;
+      padding-left: 0.5rem;
+    }
+  
+    p {
+      margin-bottom: 1rem;
+    }
+  
+    ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+  
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  
+    a {
+      color: #007185;
+      text-decoration: underline;
+      transition: color 0.2s ease-in-out;
+  
+      &:hover {
+        color: #1e3a8a; // darker blue
+      }
+    }
+  
+    strong {
+      font-weight: 600;
+      color: #111;
+    }
+  }
+  
