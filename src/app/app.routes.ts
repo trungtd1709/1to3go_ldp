@@ -32,5 +32,9 @@ export const routes: Routes = [
     path: 'pet-pill-shooter',
     loadComponent: () => import('./modules/home/pages/pet-nursing-supplies/pet-nursing-supplies.component').then(c => c.PetNursingSuppliesComponent)
   },
+  {
+    path: 'privacy',
+    loadComponent: () => import('./modules/home/pages/privacy/privacy.component').then(c => c.PrivacyComponent)
+  },
   { path: '**', redirectTo: '/' }
 ];
