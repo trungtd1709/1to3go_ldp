@@ -1,0 +1,133 @@
+<div class="upload-container">
+  <div class="upload-content">
+    <!-- Upload Form Section -->
+    <div class="upload-form-section">
+      <div class="form-header">
+        <h2>FILE UPLOAD</h2>
+        <p>Upload your files by selecting the file type and choosing files to upload</p>
+      </div>
+
+      <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+        <!-- File Type Dropdown -->
+        <div class="form-group">
+          <label for="fileType">File Type <span class="required">*</span></label>
+          <select
+            id="fileType"
+            formControlName="fileType"
+            [class.error]="isFieldInvalid('fileType')"
+          >
+            <option value="" disabled>Select a file type</option>
+            <option *ngFor="let type of fileTypes" [value]="type.value">
+              {{ type.label }}
+            </option>
+          </select>
+          <div class="error-message" *ngIf="isFieldInvalid('fileType')">
+            Please select a file type
+          </div>
+        </div>
+
+        <!-- Multiple Files Toggle -->
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              formControlName="allowMultiple"
+            />
+            <span class="checkbox-text">Allow multiple file upload</span>
+          </label>
+        </div>
+
+        <!-- File Input -->
+        <div class="form-group">
+          <label for="fileInput">Select File(s) <span class="required">*</span></label>
+          <div class="file-input-wrapper">
+            <input
+              type="file"
+              id="fileInput"
+              (change)="onFileSelect($event)"
+              [multiple]="allowMultiple"
+              class="file-input"
+            />
+            <label for="fileInput" class="file-input-label">
+              <span class="file-icon">📁</span>
+              <span class="file-text">
+                {{ allowMultiple ? 'Choose files...' : 'Choose a file...' }}
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Selected Files List -->
+        <div class="selected-files" *ngIf="selectedFiles.length > 0">
+          <div class="files-header">
+            <h4>Selected Files ({{ selectedFiles.length }})</h4>
+            <button type="button" class="clear-btn" (click)="clearAllFiles()">
+              Clear All
+            </button>
+          </div>
+          <ul class="files-list">
+            <li *ngFor="let file of selectedFiles; let i = index" class="file-item">
+              <div class="file-info">
+                <span class="file-name">{{ file.name }}</span>
+                <span class="file-size">{{ formatFileSize(file.size) }}</span>
+              </div>
+              <button type="button" class="remove-btn" (click)="removeFile(i)">
+                ✕
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Submit Button -->
+        <button 
+          type="submit" 
+          class="submit-btn" 
+          [disabled]="!isFormValid()"
+        >
+          UPLOAD FILES
+        </button>
+      </form>
+    </div>
+
+    <!-- Instructions Section -->
+    <div class="instructions-section">
+      <div class="info-header">
+        <h2>UPLOAD INSTRUCTIONS</h2>
+      </div>
+      
+      <div class="info-section">
+        <div class="info-item">
+          <div class="info-icon">1</div>
+          <div class="info-details">
+            <h3>Select File Type</h3>
+            <p>Choose the type of file you want to upload from the dropdown menu.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">2</div>
+          <div class="info-details">
+            <h3>Choose Upload Mode</h3>
+            <p>Enable "Allow multiple file upload" if you need to upload more than one file at once.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">3</div>
+          <div class="info-details">
+            <h3>Select Your Files</h3>
+            <p>Click the file input to browse and select files from your device.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">4</div>
+          <div class="info-details">
+            <h3>Upload</h3>
+            <p>Review your selected files and click the "Upload Files" button to submit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
