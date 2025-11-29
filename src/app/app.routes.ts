@@ -36,5 +36,9 @@ export const routes: Routes = [
     path: 'privacy',
     loadComponent: () => import('./modules/home/pages/privacy/privacy.component').then(c => c.PrivacyComponent)
   },
+  {
+    path: 'file-upload',
+    loadComponent: () => import('./modules/home/pages/file-upload/file-upload.component').then(c => c.FileUploadComponent)
+  },
   { path: '**', redirectTo: '/' }
 ];
